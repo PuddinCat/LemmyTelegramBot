@@ -15,10 +15,12 @@ jobs:
         name: Do stuff
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          NOTIFY_ADDR: ${{ secrets.NOTIFY_ADDR }}
         run: |
           python3 -m pip install python-telegram-bot minify-html requests beautifulsoup4 feedparser
-          python3 main.py
+          python3 main.py && curl "$NOTIFY_ADDR"
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add . && git commit -m 'Update: '"$(date)" && git push
+
 
