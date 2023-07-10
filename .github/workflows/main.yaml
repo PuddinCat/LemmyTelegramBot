@@ -23,4 +23,3 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add . && git commit -m 'Update: '"$(date)" && git push || echo 'nothing to push'
 
-
