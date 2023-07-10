@@ -1,7 +1,7 @@
 name: Scrape Lemmy
 on:
   schedule:
-    - cron: "23 */8 * * *"
+    - cron: "23 */2 * * *"
   push:
 permissions:
   contents: write
