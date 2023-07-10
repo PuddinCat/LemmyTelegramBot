@@ -1,0 +1,2 @@
+# LemmyTelegramBot
+使用Github Action从lemmy爬取post并发布到telegram上
