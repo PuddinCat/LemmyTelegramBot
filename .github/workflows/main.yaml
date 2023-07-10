@@ -21,6 +21,6 @@ jobs:
           python3 main.py && curl "$NOTIFY_ADDR"
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git status | grep 'nothing to commit' || git add . && git commit -m 'Update: '"$(date)" && git push
+          git add . && git commit -m 'Update: '"$(date)" && git push || echo 'nothing to push'
 
 
