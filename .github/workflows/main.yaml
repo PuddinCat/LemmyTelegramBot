@@ -16,7 +16,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: |
-          python3 -m pip install python-telegram-bot minify-html requests beautifulsoup4
+          python3 -m pip install python-telegram-bot minify-html requests beautifulsoup4 feedparser
           python3 main.py
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
