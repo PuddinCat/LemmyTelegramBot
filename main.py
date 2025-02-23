@@ -77,7 +77,7 @@ def html_minify(html_doc: str) -> str:
             elif tag.name == "p":
                 tag.replace_with("\n" + tag.text.strip())
             elif tag.name == "li":
-                tag.replace_with(tag.text.strip() + child[0])
+                tag.replace_with(tag.text.strip() + child[0].text.strip())
             elif tag.name in ["a", "b", "strong", "i", "em"]:
                 continue
             elif not child:
