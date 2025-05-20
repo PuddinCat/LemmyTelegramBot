@@ -3,6 +3,7 @@ on:
   schedule:
     - cron: "23 */2 * * *"
   push:
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:
